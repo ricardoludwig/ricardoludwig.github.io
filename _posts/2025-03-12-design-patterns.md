@@ -1,11 +1,9 @@
 ---
 layout: post
 title:  "Padrões de Projetos (Design Patterns)"
-date:   2025-04-12 
+date:   2025-03-12 
 categories: design-patterns
 ---
-
-# Padrões de Projetos (Design Patterns) 
 
 *Design Patterns* são soluções comprovadas para problemas recorrentes. No
 mundo do desenvolvimento de software temos os padrões de projetos apresentados
