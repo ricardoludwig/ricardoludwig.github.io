@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Padrões de Projetos (Design Patterns)"
-date:   2025-04-11 
+date:   2025-04-12 
 categories: design-patterns
 ---
 
