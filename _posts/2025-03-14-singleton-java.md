@@ -42,7 +42,7 @@ thread* não haveria problema, a coisa complica quando é executado em um ambien
 
 ### **Thread Safe**
 
-#### Solução com *synchronized*
+#### Solução com *synchronized* e *double-checked locking*
 
 Uma forma de resolver essa problema seria adequar o código para ser *thread safe*,
 para isso algumas alterações são necessárias, como o uso do *synchronized*,
@@ -54,20 +54,20 @@ Nessa abordagem, o bloco sincronizado é usado dentro do *if* com uma verificaç
 adicional para garantir que apenas uma instância seja criada.
 
 ```java
-public class SingletonSyncronized {
+public class SingletonSynchronized {
 
-    private static volatile SingletonSyncronized instance;
+    private static volatile SingletonSynchronized instance;
     private final String _data;
 
-    private SingletonSyncronized(String value) {
+    private SingletonSynchronized(String value) {
         _data = value;
     }
 
-    public static SingletonSyncronized getInstance(String value) {
+    public static SingletonSynchronized getInstance(String value) {
         if (instance == null) {
-            synchronized (SingletonSyncronized.class) {
+            synchronized (SingletonSynchronized.class) {
                 if (instance == null) {
-                    instance = new SingletonSyncronized(value);
+                    instance = new SingletonSynchronized(value);
                 }
             }
         }
